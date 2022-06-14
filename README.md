@@ -4,7 +4,7 @@ The idea of this apps is learn english words and learn type.
 
 ### stack 
 
- [Next Js] (https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/)
+ [Next Js](https://nextjs.org/), [TypeScript](https://www.typescriptlang.org/)
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
