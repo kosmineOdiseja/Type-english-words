@@ -1,6 +1,10 @@
 # Hello there!
-The idea of the project is to create a hover effect with a mouse event which should bring another element with some data.
-Stack: some API, Next JS 
+
+The idea of this apps is learn english words and learn type. 
+
+### stack 
+
+ Next Js [https://nextjs.org/], TypeScript[https://www.typescriptlang.org/]
 
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
