@@ -13,7 +13,7 @@ function WordList() {
 	<div>
 			{
 			words.map((item: WordListProps, index: number) => {
-				return (<div className='flex items-center justify-center text-2xl m-1 p-1 rounded-md bg-darkblue-400 ' key={index}>{item.word}</div>)
+				return (<div className='flex flex-row items-center justify-center text-2xl m-1 p-1 rounded-md bg-darkblue-400 ' key={index}>{item.word}</div>)
 			})
 		}	
 	</div>

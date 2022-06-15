@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.css'
 import { useState, createContext, useEffect } from 'react'
 import WordList from '../components/WordList'
 import { TypingProvider } from '../components/context/TypingContext'
+import WordsSpeed from '../components/WordsSpeed'
+import InputField from '../components/InputField'
 
 const Home: NextPage = () => {
 
@@ -21,9 +23,10 @@ const Home: NextPage = () => {
           </Head>
 
           {/* <main className={styles.main}> */}
-          <main className='text-3xl font-bold underline container flex justify-center items-center w-9/12 h-screen m-auto'>
-
-          <WordList />
+          <main className='text-3xl flex flex-col justify-center items-center w-9/12 h-screen m-auto'>
+            <WordList />
+            <InputField /> 
+            <WordsSpeed />
           </main>
 
           <footer className={styles.footer}>
