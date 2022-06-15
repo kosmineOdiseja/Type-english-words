@@ -2,16 +2,11 @@ import{createContext, useEffect, useReducer } from 'react'
 import  Reducer  from './Reducer'
 import { ContextActionType } from './Reducer'
 
-interface TypingContextProps {
-	word: string,
-	meaning: string,
-
-}
 
 
 // https://www.youtube.com/watch?v=bmxQzJHFCV8&ab_channel=Techbase
 //https://github.com/MitchelSt/context-api-ts-snippet/blob/main/README.md
-const TypingContext = createContext< null| TypingContextProps >(null)
+const TypingContext = createContext< null| any >(null)
 
 const initialState = {
 	words: [],
