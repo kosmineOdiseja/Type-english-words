@@ -1,19 +1,44 @@
-import { useContext } from 'react'
+import { useContext, useState, useRef } from 'react'
 import TypingContext from './context/TypingContext'
+import Word from './Word' 
 
-interface WordListProps {
-	words: string, 
+export interface WordListProps {
+	word: string, 
 	meaning: string, 
 	sentance: string,
 }
 
-function WordList() {
-	const { words } = useContext<WordListProps>(TypingContext) 
+function WordList({ typedWord}: any) {
+	const { words } = useContext(TypingContext) 
+
+	const [ activeWordIndex, setActiveWordIndex ] = useState(0)
+	const [ correctWordArray, setCorrectWordArray ] = useState([])
+
+
+	// this is for random the word list 
+	// const doWordsRandom = () =>  words.word.split(' ' ).sort(() => Math.random() > 0.5 ? 1 : -1)
+	// const randomWords = doWordsRandom()
+	// const randomWords = useRef(doWordsRandom())
+	// console.log(randomWords, 'this is random words')
+
+	
+	const handleTypedWord = (value: string) => {
+
+
+
+	}
+
+	// console.log(words, 'this is words')
   return (
 	<div>
 			{
+			// randomWords.map((item: WordListProps, index: number) => {
 			words.map((item: WordListProps, index: number) => {
-				return (<div className='flex flex-row items-center justify-center text-2xl m-1 p-1 rounded-md bg-darkblue-400 ' key={index}>{item.word}</div>)
+				return (<Word  
+							key={index}
+							word={item.word}
+						/>)
+
 			})
 		}	
 	</div>

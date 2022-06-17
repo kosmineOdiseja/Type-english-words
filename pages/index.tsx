@@ -26,7 +26,7 @@ const Home: NextPage = () => {
           <main className='text-3xl flex flex-col justify-center items-center w-9/12 h-screen m-auto'>
             <WordList />
             <InputField /> 
-            <WordsSpeed />
+            {/* <WordsSpeed /> */}
           </main>
 
           <footer className={styles.footer}>

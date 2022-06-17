@@ -1,44 +1,49 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import  Reducer  from './context/Reducer'
 import { ContextActionType } from './context/Reducer'
+import TypingContext  from './context/TypingContext'
+import { WordListProps } from './WordList'
 
-const initialState = {
-	TypedWord: '',
-}
+// const initialState = {
+// 	TypedWord: '',
+// }
 
 function InputField() {
+  const [typedWord, setTypedWord] = useState('')
+// const { TypedWord, setTypedWord } = useContext(TypingContext)
+  const [ activeWordIndex, setActiveWordIndex ] = useState(0);
+  const [ correctWordArray, setCorrectWordArray ] = useState([]);	
+	const [ userInput, setUserInput ] = useState('')
+// console.log(typedWord, 'this is typed word')
 
-// const [ TypedWord, setTypedWord ] = React.useState('')
-// const [state, dispatch ] = useReducer(Reducer, initialState)
+const processInput = (value) => {
 
+    if(value.endsWith(' ')) {
 
-// const handleChange = (e: any ) => {
-// 	// console.log(e.target.value, 'handleChange')
-// 	dispatch({
-// 		type: ContextActionType.SET_TYPED_WORD,
-// 		payload: e.target.value,
-// 	})
+      setActiveWordIndex(activeWordIndex + 1);
+      setUserInput('');
+      } else {
+      setUserInput(value)
+    }
 
-// }
-const [ typedWords , setTypedWords ] = useState([])
+    // correct word
+   setCorrectWordArray(data => {
+        const word = value.trim()
+        const newResult = [...data]
+        newResult[activeWordIndex] = word === words.current[activeWordIndex]
+        return newResult
+    })
+  }
 
-const handleChange = (e: any ) => {
-	// console.log(e.target.value, 'handleChange')
-	setTypedWords(e.target.value)
-
-}
-
-// console.log(state, 'state')
   return (
-	<textarea 
-		// value={state}
+	<input 
+		value={typedWord}
 		// type='text'
-		placeholder='type here'
-		className='flex-1 p-2 border-2 border-gray-600 w-full m-auto'
-		onChange={(e)=>handleChange(e)}
+		placeholder='Type here... '
+		className='border-2 border-gray-600 p-2 rounded-md text-xl'
+		onChange={(e)=>processInput(e.target.value)}
 	>
-	
-	</textarea>
+	</input>
   )
 }
 

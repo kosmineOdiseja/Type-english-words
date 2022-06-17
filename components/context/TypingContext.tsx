@@ -18,7 +18,7 @@ export const TypingProvider = ({ children }: any) => {
 const  [state, dispatch] = useReducer(Reducer, initialState)  
 
 	
-
+// fetching dataa from the server 
 	useEffect(() => {
 		fetchWords()
 	}, [])
@@ -34,6 +34,7 @@ const  [state, dispatch] = useReducer(Reducer, initialState)
 		})
 
 	}
+
 
 	return (
 		<TypingContext.Provider value={{
