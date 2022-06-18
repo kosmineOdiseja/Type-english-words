@@ -12,7 +12,7 @@ function InputField() {
   const [typedWord, setTypedWord] = useState('')
 // const { TypedWord, setTypedWord } = useContext(TypingContext)
   const [ activeWordIndex, setActiveWordIndex ] = useState(0);
-  const [ correctWordArray, setCorrectWordArray ] = useState([]);	
+  const [ correctLetter, setCorrectLetter ] = useState([]);	
 	const [ userInput, setUserInput ] = useState('')
 // console.log(typedWord, 'this is typed word')
 

@@ -24,9 +24,8 @@ function WordList({ typedWord}: any) {
 	
 	const handleTypedWord = (value: string) => {
 
-
-
 	}
+
 
 	// console.log(words, 'this is words')
   return (
