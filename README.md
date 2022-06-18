@@ -1,6 +1,6 @@
 # Hello there!
 
-The idea of this apps is learn english words and learn type. 
+The idea of this apps is learn english words and learn type. Now working! 
 
 ### stack 
 
